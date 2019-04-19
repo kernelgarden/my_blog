@@ -1,16 +1,10 @@
-<h2>
-  <%= if @page.tag == nil do %>
-    <%= @page.title %>
-  <% else %>
-    Posts Tagged "<%= @page.tag.name %>"
-  <% end %>
-</h2>
-<br /> <br />
+<%= if @page.tag == nil do %>
+  <h2><%= @page.title %></h2>
+  <br /><br />
 
-<%= for {date, group} <- Enum.group_by(@all_posts, &(&1.date)) do %>
+  <%= for {date, group} <- Enum.group_by(@all_posts, &(&1.date)) do %>
   <span class="date"><bd><%= date %></bd></span>
   <br /> <br />
-
   <%= for x <- group do %>
     <div class="container">
       <div class="row">
@@ -26,4 +20,32 @@
       </div>
     </div>
   <% end %>
+<% end %>
+
+<% else %>
+
+  <h2>Posts Tagged "<%= @page.tag.name %>"</h2>
+  <br /><br />
+
+  <%= for {date, group} <- Enum.group_by(Enum.filter(@all_posts, &(Enum.member?(&1.tags, @page.tag))), &(&1.date)) do %>
+    <span class="date"><bd><%= date %></bd></span>
+    <br /> <br />
+
+    <%= for x <- group do %>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-0">
+            <a href="<%= x.url %>"><b><%= x.title %></b></a>
+            &mdash;
+            <%= for tag <- x.tags do %>
+              <a class="tag-btn" href="<%= tag.list_url %>"><%= tag.name %></a>
+            <% end %>
+
+            <p><%= x.preview %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+
 <% end %>
