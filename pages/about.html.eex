@@ -1,0 +1,72 @@
+---
+label: about
+order: 0
+title: about
+---
+<!-- +++++ Welcome Section +++++ -->
+<div id="ww">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 centered">
+                <img src="assets/images/profile.jpg">
+                <h1>Jung Won Ryu</h1>
+            </div><!-- /col-lg-8 -->
+        </div><!-- /row -->
+    </div> <!-- /container -->
+</div><!-- /ww -->
+
+
+<!-- +++++ Information Section +++++ -->
+
+<div class="container pt">
+    <div class="row mt centered">	
+        <h1>Summary</h1>
+    </div><!-- /row -->
+    
+    <div class="row mt">
+        <div class="col-lg-6">
+            <ul>
+                <li><h4>Interest</h4>
+                    <ul>
+                        <li><b>Parallel and distributed Server Development</b></li>
+                    </ul>
+                </li>
+                <br/>
+                <li><h4>Skills</h4>
+                    <ul>
+                        <li><b>Web Back-end Framework: Flask, Ruby on Rails, Phoenix</b></li>
+                        <li><b>Back-end Technologies: MySQL, Redis, Kafka, Protobuf</b></li>
+                        <li><b>Game Engine: Unity</b></li>
+                        <li><b>Tools and DevOps: Git, SVN, Vim, VS, VS Code, Linux</b></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /colg-lg-6 -->
+        
+        <div class="col-lg-6">
+            <h4>Language SKILLS</h4>
+            <br/>
+            <b>Elixir</b>
+            <div class="progress">
+                <div class="progress-bar progress-bar-theme" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;">
+                    <span class="sr-only">80% Complete</span>
+                </div>
+            </div>
+
+            <b>C#</b>
+            <div class="progress">
+                <div class="progress-bar progress-bar-theme" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 50%;">
+                    <span class="sr-only">80% Complete</span>
+                </div>
+            </div>
+            
+            <b>C++</b>
+            <div class="progress">
+                <div class="progress-bar progress-bar-theme" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" style="width: 40%;">
+                    <span class="sr-only">95% Complete</span>
+                </div>
+            </div>
+
+        </div><!-- /col-lg-6 -->
+    </div><!-- /row -->
+</div><!-- /container -->
