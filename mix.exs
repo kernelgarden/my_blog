@@ -19,7 +19,8 @@ defmodule KernelgardenGithubIo.MixFile do
 
   defp deps do
     [
-      {:serum, path: "../Serum"}
+      #{:serum, path: "../Serum"}
+      {:serum, "~> 0.12.0"}
     ]
   end
 end
